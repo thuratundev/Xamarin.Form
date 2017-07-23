@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Views.CoursePage"
+             xmlns:pages="clr-namespace:Xamarin.Forms.Pages;assembly=Xamarin.Forms.Pages"
+             Title="Course"
+             >
+  <StackLayout Orientation="Vertical">
+    <Label Text="{Binding CourseTitle}" VerticalOptions="Center" HorizontalOptions="Center" />
+    <pages:HeroImage
+      Text="Keith Ballinger"
+      Detail="Xamarin"/>
+  </StackLayout>
+</ContentPage>

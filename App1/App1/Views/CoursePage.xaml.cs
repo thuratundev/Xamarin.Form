@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using Xamarin.Forms;
+
+namespace App1.Views
+{
+    public partial class CoursePage : ContentPage
+    {
+        public CoursePage()
+        {
+            InitializeComponent();
+            this.BindingContext = new ViewModels.CoursePageViewModel();
+        }
+    }
+}

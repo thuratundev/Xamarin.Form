@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Views.MainHeaderPage"
+             xmlns:awesomelabel ="clr-namespace:App1"
+            
+             Title="MasterPage"
+             >
+  <Frame>
+    <ListView 
+      ItemsSource="{Binding contentobj}">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+           <StackLayout Spacing="0">
+              <awesomelabel:FontAwesomeLabel Text="" FontSize="20"></awesomelabel:FontAwesomeLabel>
+              <Label Text="{Binding Path=ContentName}" />
+    
+              </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </Frame>
+</ContentPage>

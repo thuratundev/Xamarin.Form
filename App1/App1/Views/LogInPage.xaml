@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App1"
+             xmlns:awesomelabel ="clr-namespace:App1"
+             x:Class="App1.LogInPage">
+  <Grid Margin="20">
+    <Grid.ColumnDefinitions >
+      <ColumnDefinition Width="auto"/>
+      <ColumnDefinition Width="*"/>
+      <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions RowSpacing="auto">
+      <RowDefinition Height="auto"/>
+      <RowDefinition Height="auto"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="auto"/>
+    </Grid.RowDefinitions>
+    <awesomelabel:FontAwesomeLabel Grid.Row="0" Grid.Column="0" Text="" FontSize="20" ></awesomelabel:FontAwesomeLabel>
+    <awesomelabel:FontAwesomeLabel Grid.Row="1" Grid.Column="0" Text="" FontSize="20"></awesomelabel:FontAwesomeLabel>
+    <Entry HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Placeholder="User Name" Text="{Binding userName}"></Entry>
+    <Entry HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Placeholder="Password" IsPassword="True" Text="{Binding passWord}"></Entry>
+    <Button  Grid.Row="3" Grid.Column="2"  Text="Login" StyleClass="Primary"  Command="{Binding SubmitCommand}"></Button>
+  </Grid>  
+
+</ContentPage>

@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:App1"
              xmlns:awesomelabel ="clr-namespace:App1"
              x:Class="App1.LogInPage">
+  <Frame VerticalOptions="CenterAndExpand" HorizontalOptions="Center" >
   <Grid Margin="20">
     <Grid.ColumnDefinitions >
       <ColumnDefinition Width="auto"/>
@@ -16,11 +17,17 @@
       <RowDefinition Height="*"/>
       <RowDefinition Height="auto"/>
     </Grid.RowDefinitions>
-    <awesomelabel:FontAwesomeLabel Grid.Row="0" Grid.Column="0" Text="" FontSize="20" ></awesomelabel:FontAwesomeLabel>
-    <awesomelabel:FontAwesomeLabel Grid.Row="1" Grid.Column="0" Text="" FontSize="20"></awesomelabel:FontAwesomeLabel>
-    <Entry HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Placeholder="User Name" Text="{Binding userName}"></Entry>
-    <Entry HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Placeholder="Password" IsPassword="True" Text="{Binding passWord}"></Entry>
+    
+    <RelativeLayout Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="20" HeightRequest="20">
+      <awesomelabel:FontAwesomeLabel  Text="" FontSize="20"></awesomelabel:FontAwesomeLabel>
+    </RelativeLayout>
+    <Entry Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" x:Name="username" Placeholder="Username" HeightRequest="40" Text="{Binding userName}"/>
+    <RelativeLayout Grid.Row="1" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="20" HeightRequest="20">
+      <awesomelabel:FontAwesomeLabel  Text="" FontSize="20"></awesomelabel:FontAwesomeLabel>
+    </RelativeLayout>
+    <Entry Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" x:Name="password" Placeholder="Password" HeightRequest="40" IsPassword="true" Text="{Binding passWord}"/>
     <Button  Grid.Row="3" Grid.Column="2"  Text="Login" StyleClass="Primary"  Command="{Binding SubmitCommand}"></Button>
-  </Grid>  
+  </Grid>
+  </Frame>
 
 </ContentPage>

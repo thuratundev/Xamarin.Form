@@ -8,7 +8,10 @@
   <StackLayout Orientation="Vertical">
     <Label Text="{Binding CourseTitle}" VerticalOptions="Center" HorizontalOptions="Center" />
     <pages:HeroImage
-      Text="Keith Ballinger"
-      Detail="Xamarin"/>
+      ImageSource="thura.jpg"
+      Text="ThuraTun"
+      Detail="Developer"
+     Aspect="AspectFit"
+      />
   </StackLayout>
 </ContentPage>
